@@ -94,6 +94,20 @@ nav h2 {
     transition: color 0.3s ease;
 }
 
+.nav-links ul li::after{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+  display: block;
+  margin: auto;
+  transition: .5s;    
+}
+
+.nav-links ul li:hover::after{
+  width: 100%;
+}
+
 .nav-links ul li a:hover {
     color: var(--clr-orange-3);
 }

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logga in</title>
+    <link rel="stylesheet" href="css/login.css" />
+    <script src="scripts/login.js" defer></script>
+
+
+</head>
+<body>
+   
+    <nav class="link">
+        <ul> 
+            <li><a href="index.html">FakeStore</a></li>
+        </ul>
+    </nav>
+
+    <form id="loginForm">
+        <h1>Logga in</h1>
+        
+        <label for="username" class="user"> Användarnamn</label>    
+        <input type="text" id="username" placeholder="Användarnamn" >
+
+        <label for="password" class="user"> Lösenord </label>
+        <input type="password" id="password" placeholder="Lösenord" >
+       
+        <button type="submit">Logga in</button>
+        
+        <button type="button" onclick="window.location.href='signup.html'">Skapa konto</button>
+        
+    </form>
+
+    <div id="loginMessage" class="message-box"></div>
+   
+
+    
+</body>
+</html>
