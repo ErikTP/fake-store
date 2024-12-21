@@ -3,18 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Title</title>
+  <title>FakeStore</title>
   <link rel="stylesheet" href="CSS/styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
   <script src="JS/script.js" defer></script>
 </head>
 <body>
 <header class="header">
-  <h1 class="heading">My Fake Store</h1>
-  <h3>Happy Shopping!</p>
-</header>
+        <nav>
+            <h2>FakeStore</h2>
+            <div class="nav-links" id="navLinks">  
+                <i class="fa fa-close" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#products">PRODUCTS</a></li>
+                    <li><a href="#">CATEGORY</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="login.html">LOG IN</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1 class="heading">My Fake Store</h1>
+        <h3>Happy Shopping!</h3>
+</header>   
 <main class="products">
   <div class="title">
-    <h2>our products</h2>
+    <h2 id="products">our products</h2>
   </div>
   <section class="section-prod">
     <article class="product-item">
