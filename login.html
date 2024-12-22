@@ -1,40 +1,31 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logga in</title>
-    <link rel="stylesheet" href="css/login.css" />
-    <script src="scripts/login.js" defer></script>
-
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="CSS/login.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  <script src="JS/login.js" defer></script>
+  
 </head>
 <body>
-   
-    <nav class="link">
-        <ul> 
-            <li><a href="index.html">FakeStore</a></li>
-        </ul>
-    </nav>
 
-    <form id="loginForm">
-        <h1>Logga in</h1>
-        
-        <label for="username" class="user"> Användarnamn</label>    
-        <input type="text" id="username" placeholder="Användarnamn" >
+  <nav class="link">
+    <ul> 
+        <li><a href="index.html">FakeStore</a></li>
+    </ul>
+  </nav>
 
-        <label for="password" class="user"> Lösenord </label>
-        <input type="password" id="password" placeholder="Lösenord" >
-       
-        <button type="submit">Logga in</button>
-        
-        <button type="button" onclick="window.location.href='signup.html'">Skapa konto</button>
-        
+  <main>
+    <form id="login-form">
+      <h2>Login</h2>
+      <input type="text" id="login-username" placeholder="Username" required>
+      <input type="password" id="login-password" placeholder="Password" required>
+      <button type="submit">Login</button>
+      <button type="button" onclick="window.location.href='signup.html'">Register</button>
+      <p id="login-message" class="message-box"></p>
     </form>
-
-    <div id="loginMessage" class="message-box"></div>
-   
-
-    
+  </main>
 </body>
 </html>

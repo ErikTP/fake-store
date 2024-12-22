@@ -205,17 +205,38 @@ nav .fa{
   }
   
   .product-item {
-    display: grid;
-    max-width: 15rem;
-    gap: 1rem;
+    position: relative; 
+    margin: 4rem;
+  }
+  
+  .blur-content {
+    filter: blur(4px); 
+  }
+  
+  .product-item::before {
+    content: '🔒 Endast medlemmar har tillgång'; 
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background-color: rgba(0, 0, 0, 0.6); 
+    color: white; 
+    padding: 0.5rem 1rem; 
+    border-radius: 5px; 
+    z-index: 2; 
+    font-size: 1.2rem; 
   }
   
   .photo {
-    width: 85%;
-    padding: 0.5rem;
-    border: 0.2rem solid var(--clr-orange-2);
-    border-radius: var(--radius);
+    display: block;
+    width: 100%; 
+    filter: blur(15px); 
   }
+  
+  .product-item:hover .photo {
+    filter: blur(13px);
+  }
+  
   
   .product-header {
     color: var(--clr-orange-2);
