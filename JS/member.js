@@ -39,6 +39,42 @@ document.addEventListener('DOMContentLoaded', () => {
       console.error('Error fetching products:', error);
     }
   }
+
+  async function fetchProductById(productId) {
+    try {
+      const response = await fetch(`https://fakestoreapi.com/products/${productId}`);
+      if (!response.ok) {
+        throw new Error('Product not found');
+      }
+      const product = await response.json();
+  
+      // Rendera produktdetaljer
+      const productDetails = document.querySelector('#product-details');
+      productDetails.innerHTML = `
+        <div>
+          <h4>${product.title}</h4>
+          <img class="photo" src="${product.image}" alt="${product.title}" style="width: 150px; border: 2px solid var(--clr-orange-2); margin: 1rem 0;">
+          <p><strong>Description:</strong> ${product.description}</p>
+          <p><strong>Price:</strong> $${product.price.toFixed(2)}</p>
+          <p><strong>Category:</strong> ${product.category}</p>
+        </div>
+      `;
+    } catch (error) {
+      const productDetails = document.querySelector('#product-details');
+      productDetails.innerHTML = `<p style="color: var(--clr-orange-1);">Product not found. Please enter a valid ID.</p>`;
+    }
+  }
+  
+  // Lyssna på sökknappen
+  document.querySelector('#search-button').addEventListener('click', () => {
+    const productId = document.querySelector('#product-id-input').value;
+    if (productId) {
+      fetchProductById(productId);
+    } else {
+      alert('Please enter a product ID');
+    }
+  });
+  
   
   // Kör funktionen vid sidladdning
   document.addEventListener('DOMContentLoaded', fetchAndDisplayProducts);
