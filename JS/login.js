@@ -27,29 +27,29 @@ async function fetchUsers() {
   }
 }
 
-// Hantera inloggning
 function loginUser(event) {
     event.preventDefault();
-  
+    
     const username = document.getElementById('login-username').value;
     const password = document.getElementById('login-password').value;
     const users = JSON.parse(localStorage.getItem('users')) || [];
-  
+    
     const messageBox = document.getElementById('login-message');
     const user = users.find(u => u.username === username && decryptPassword(u.password) === password); // Dekryptera lösenord
-  
+    
     if (user) {
+      sessionStorage.setItem('loggedInUser', username); // Spara användarnamnet
       messageBox.textContent = "Inloggning lyckades!";
       messageBox.className = 'message-box visible';
       setTimeout(() => {
-        window.location.href = 'member.html'; // Omdirigera till admin-sidan
+        window.location.href = 'member.html'; // Omdirigera till medlemssidan
       }, 1000); // Vänta 1 sekund innan omdirigering
     } else {
       messageBox.textContent = "Fel användarnamn eller lösenord!";
       messageBox.className = 'message-box visible';
     }
   }
-
+  
 // Koppla formulär till funktioner
 document.getElementById('login-form').addEventListener('submit', loginUser);
 
