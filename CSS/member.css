@@ -70,6 +70,7 @@ nav {
 nav h2 {
     font-size: 1.5rem;
     font-family: var(--ff-primary);
+    color: #ff8a3c;
     margin: 0;
 }
 
@@ -89,7 +90,7 @@ nav h2 {
 
 .nav-links ul li a {
     text-decoration: none;
-    color: var(--clr-white);
+    color: white;
     font-size: 1rem;
     transition: color 0.3s ease;
 }
@@ -126,13 +127,13 @@ nav .fa{
   .nav-links
   {
       position: fixed;
-      background: #f44336;
+      background: #000000d7;
       height: 100vh;
       width: 200px;                                                   
       top: 0;
       right: -200px;
       text-align: left;
-      z-index: 2;
+      z-index: 5;
       transition: 0.5s;
       display: flex;
       flex-direction: column;
@@ -192,42 +193,107 @@ nav .fa{
     padding: 1.5rem 0;
   }
 
-  .search-container {
-    text-align: center;
-    margin-bottom: 2rem;
-    margin: 4rem;
-    margin-bottom: 1rem;
+  .heading{
+    color: #fff;
+    margin-bottom: 1.5rem;
   }
-  
-  #product-id-input {
+
+  .search-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    align-content: center;
+    gap: 1rem; 
+    margin: 2rem auto; 
+    max-width: 90%; 
+}
+
+.search-actions {
+    display: flex; 
+    gap: 1rem; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+}
+
+#product-id-input {
     padding: 0.5rem;
     border: 2px solid var(--clr-orange-2);
     border-radius: var(--radius);
+    margin-top: 2rem;
     font-size: 1rem;
-  }
-  
-  #search-button {
+    width: 100%; 
+    max-width: 300px; 
+}
+
+#search-button {
     padding: 0.5rem 1rem;
     background-color: var(--clr-orange-3);
-    color: var(--clr-white);
+    color: white;
     border: none;
     border-radius: var(--radius);
     font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
     cursor: pointer;
     transition: background-color 0.3s;
-  }
-  
-  #search-button:hover {
+    flex-shrink: 0; 
+}
+
+#search-button:hover {
     background-color: var(--clr-orange-2);
-  }
-  
-  #product-details {
-    margin-top: 4rem;
+}
+
+#category-filter {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 2px solid var(--clr-orange-2);
+    border-radius: var(--radius);
+    flex-shrink: 0;
+} 
+
+.filter-container{
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.filter-container label{
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+#product-details {
+    margin-top: 1rem; 
     color: var(--clr-orange-2);
     font-size: 1.2rem;
-    line-height: 2rem;
-  }
-  
+    line-height: 2.5rem;
+    text-align: center;
+    width: 100%;
+}
+
+/* Responsiv design */
+@media (max-width: 768px) {
+    .search-container {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .search-actions {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    #search-button,
+    #category-filter {
+        width: 40%; 
+        max-width: 300px; 
+    }
+
+    .filter-container{
+      margin-top: 4rem;
+    }
+}
+
   .title {
     text-align: center;
     color: var(--clr-orange-2);
@@ -238,6 +304,7 @@ nav .fa{
     justify-items: center;
     gap: 1rem;
     padding-top: 1rem;
+    margin-left: 2.5rem;
   }
   
   .product-item {
@@ -277,6 +344,11 @@ nav .fa{
     .product-info {
       margin-top: 2rem;
     }
+
+    .section-prod{
+      margin-left: 2rem;
+    }
+
     h1 {
       font-size: 4rem;
     }
@@ -308,10 +380,55 @@ nav .fa{
       gap: 1rem;
       max-width: 15rem;
     }
+
+    .filter-container{
+      margin-top: 3rem;
+    }
   }
   
   @media (min-width: 1200px) {
     .section-prod {
       grid-template-columns: 1fr 1fr 1fr;
+      margin-left: 2rem;
+    }
+
+    .filter-container{
+      margin-top: 3rem;
     }
   } 
+
+  /*--------------Footer---------------*/
+
+.footer{
+  background: #247e77;
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.footer h4{
+  color: #fcac78;
+  margin-bottom: 25px;
+  margin-top: 20px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+footer p{
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+footer p a{
+  color: white;
+}
+
+.icons .fa{
+  color: #fcac78;
+  margin: 0 13px;
+  cursor: pointer;
+  padding: 18px 0;
+}

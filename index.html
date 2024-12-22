@@ -8,9 +8,10 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
   <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
-  <script src="JS/script.js" defer></script>
+  <script src="JS/index.js" defer></script>
 </head>
 <body>
+  <!-------- Header ---------->
 <header class="header">
         <nav>
             <h2>FakeStore</h2>
@@ -20,15 +21,17 @@
                     <li><a href="#">ABOUT US</a></li>
                     <li><a href="#products">PRODUCTS</a></li>
                     <li><a href="#">CATEGORY</a></li>
-                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
                     <li><a href="login.html">LOG IN</a></li>
                 </ul>
             </div>
             <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
         <h1 class="heading">My Fake Store</h1>
-        <h3>Happy Shopping!</h3>
-</header>   
+        <h3 class="heading">Happy Shopping!</h3>
+</header>  
+
+<!-------- Main ---------->
 <main class="products">
   <div class="title">
     <h2 id="products">our products</h2>
@@ -108,5 +111,20 @@
     </article>
   </section>
 </main>
+
+<!-------- Footer ---------->
+<footer>
+  <section class="footer" id="contact">
+          <h4>Contact Us</h4>
+          <p> Phone Number: <a href="tel:+46000099111">+46 12 34 56 789</a> </p><br><p> E-mail: <a href="mailto:email@example.com">FakeStore@hotmail.com</a></p>
+          <div class="icons">
+              <a href="index.html"><i class="fa fa-facebook"></i></a>
+              <a href="index.html"><i class="fa fa-twitter"></i></a>
+              <a href="index.html"><i class="fa fa-instagram"></i></a>
+              <a href="index.html"><i class="fa fa-linkedin"></i></a>   
+          </div>
+          <p class="footer-link">© 2024 FakeStore. All rights reserved.</p>
+  </section>  
+  </footer>
 </body>
 </html>

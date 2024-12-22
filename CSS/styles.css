@@ -70,6 +70,7 @@ nav {
 nav h2 {
     font-size: 1.5rem;
     font-family: var(--ff-primary);
+    color: #ff8a3c;
     margin: 0;
 }
 
@@ -89,7 +90,7 @@ nav h2 {
 
 .nav-links ul li a {
     text-decoration: none;
-    color: var(--clr-white);
+    color: white;
     font-size: 1rem;
     transition: color 0.3s ease;
 }
@@ -126,13 +127,13 @@ nav .fa{
   .nav-links
   {
       position: fixed;
-      background: #f44336;
+      background: #000000d7;
       height: 100vh;
       width: 200px;                                                   
       top: 0;
       right: -200px;
       text-align: left;
-      z-index: 2;
+      z-index: 5;
       transition: 0.5s;
       display: flex;
       flex-direction: column;
@@ -163,7 +164,6 @@ nav .fa{
 }
 
   
-  
   h1, h2, h3, h4 {
     letter-spacing: var(--spacing);
     text-transform: capitalize;
@@ -191,6 +191,11 @@ nav .fa{
     margin-top: 8rem;
     padding: 1.5rem 0;
   }
+
+  .heading{
+    color: #fff;
+    margin-bottom: 1.5rem;
+  }
   
   .title {
     text-align: center;
@@ -202,6 +207,7 @@ nav .fa{
     justify-items: center;
     gap: 1rem;
     padding-top: 1rem;
+    margin-left: 2.5rem;
   }
   
   .product-item {
@@ -299,3 +305,40 @@ nav .fa{
       grid-template-columns: 1fr 1fr 1fr;
     }
   }
+
+
+  /*--------------Footer---------------*/
+
+.footer{
+  background: #247e77;
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.footer h4{
+  color: #fcac78;
+  margin-bottom: 25px;
+  margin-top: 20px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+footer p{
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+footer p a{
+  color: white;
+}
+
+.icons .fa{
+  color: #fcac78;
+  margin: 0 13px;
+  cursor: pointer;
+  padding: 18px 0;
+}

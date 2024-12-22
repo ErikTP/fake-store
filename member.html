@@ -11,6 +11,7 @@
   <script src="JS/member.js" defer></script>
 </head>
 <body>
+  <!-------- Header ---------->
 <header class="header">
         <nav>
             <h2>FakeStore</h2>
@@ -19,25 +20,36 @@
                 <ul>
                     <li><a href="#">ABOUT US</a></li>
                     <li><a href="#products">PRODUCTS</a></li>
-                    <li><a href="#">CATEGORY</a></li>
-                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#category">CATEGORY</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
                     <li><a href="login.html">LOG OUT</a></li>
                 </ul>
             </div>
             <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
         <h1 class="heading">My Fake Store</h1>
-        <h3>Happy Shopping!</h3>
+        <h3 class="heading">Happy Shopping!</h3>
 </header>   
+
+<!-------- Main ---------->
 <main class="products">
   <div class="title">
     <h2 id="products">our products</h2>
   </div>
+
   <div class="search-container">
     <input type="number" id="product-id-input" placeholder="Enter product ID (1-20)">
     <button id="search-button">Search Product</button>
     <div id="product-details"></div>
   </div>
+
+  <div class="filter-container" id="category">
+    <label for="category-filter">Filter by Category:</label>
+    <select id="category-filter">
+      <option value="all">All</option>
+    </select>
+  </div>
+  
   <section class="section-prod">
     <article class="product-item">
       <div class="blur-content">
@@ -112,6 +124,22 @@
       </div>
     </article>
   </section>
+
+<!-------- Footer ---------->
+<footer>
+  <section class="footer" id="contact">
+          <h4>Contact Us</h4>
+          <p> Phone Number: <a href="tel:+46000099111">+46 12 34 56 789</a> </p><br><p> E-mail: <a href="mailto:email@example.com">FakeStore@hotmail.com</a></p>
+          <div class="icons">
+              <a href="index.html"><i class="fa fa-facebook"></i></a>
+              <a href="index.html"><i class="fa fa-twitter"></i></a>
+              <a href="index.html"><i class="fa fa-instagram"></i></a>
+              <a href="index.html"><i class="fa fa-linkedin"></i></a>   
+          </div>
+          <p class="footer-link">© 2024 FakeStore. All rights reserved.</p>
+  </section>  
+  </footer>
+  
 </main>
 </body>
 </html>

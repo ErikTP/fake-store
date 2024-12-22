@@ -64,7 +64,6 @@
       border: 0;
   }
   
-  
   .link {
       position: absolute;
       top: 10px;
@@ -118,3 +117,16 @@
   .message-box.visible {
     display: block; 
   }
+
+  .message-box.error {
+    color: white;
+    background-color: #f44336; /* Rött för fel */
+    border-left: 5px solid #e60000;
+  }
+  
+  .message-box.success {
+    color: white;
+    background-color: #4CAF50; /* Grönt för framgång */
+    border-left: 5px solid #008000;
+  }
+  
