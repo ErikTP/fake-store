@@ -208,6 +208,7 @@ nav .fa{
     display: grid;
     max-width: 15rem;
     gap: 1rem;
+    margin: 4rem;
   }
   
   .photo {
